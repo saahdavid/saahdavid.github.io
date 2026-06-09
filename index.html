@@ -232,7 +232,7 @@
 
         /* ── TEACHING ── */
         #teaching { background: var(--surface); }
-        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.4rem; margin-bottom: 3rem; }
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.4rem; margin-bottom: 1.4rem; }
         .course-card {
             background: var(--card); border: 1px solid var(--card-border);
             border-radius: 3px; padding: 2rem 1.8rem; position: relative; overflow: hidden;
@@ -254,6 +254,40 @@
         .course-tag {
             font-size: 0.72rem; color: var(--subtle);
             padding: 3px 10px; border: 1px solid var(--card-border); border-radius: 2px;
+        }
+        .course-actions {
+            display: flex; flex-wrap: wrap; gap: 0.65rem;
+            margin-top: 1.4rem;
+        }
+        .course-gpt {
+            display: inline-flex; align-items: center; justify-content: center;
+            max-width: 100%; padding: 9px 15px;
+            background: var(--accent); color: #fff;
+            border: 1px solid var(--accent); border-radius: 2px;
+            font-size: 0.72rem; font-weight: 500; letter-spacing: 0.07em;
+            line-height: 1.3; text-align: center; text-transform: uppercase;
+            text-decoration: none; transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+        .course-gpt:hover { background: #a8002a; border-color: #a8002a; }
+        .course-gpt.secondary {
+            background: transparent; color: var(--accent); border-color: var(--accent-border);
+        }
+        .course-gpt.secondary:hover { background: var(--accent-dim); border-color: var(--accent); }
+        .learning-tools {
+            background: var(--card); border: 1px solid var(--card-border);
+            border-radius: 3px; padding: 1.6rem 1.8rem; margin-bottom: 3rem;
+            display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+        }
+        .learning-tools-label {
+            font-size: 0.7rem; color: var(--accent);
+            letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.35rem;
+        }
+        .learning-tools-title {
+            font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+        .learning-tools-copy {
+            max-width: 620px; font-size: 0.87rem; color: var(--muted); line-height: 1.7;
         }
         .philosophy {
             background: var(--card); border: 1px solid var(--card-border);
@@ -356,6 +390,7 @@
             .photo-frame { width: 220px; height: 264px; margin: 0 auto; }
             .nav-links { display: none; }
             section { padding: 80px 0; }
+            .learning-tools { align-items: flex-start; flex-direction: column; }
         }
     </style>
 </head>
@@ -526,6 +561,9 @@
                     <span class="course-tag">Spring 2026: 230 Students</span>
                     <span class="course-tag">SMU</span>
                 </div>
+                <div class="course-actions">
+                    <a href="https://chatgpt.com/g/g-69fd54d7c3548191b1416a9664946781-stat-2331-smu-intro-to-statistical-methods" target="_blank" rel="noopener" class="course-gpt">Open STAT 2331 GPT</a>
+                </div>
             </div>
             <div class="course-card">
                 <p class="course-code">STAT 4340</p>
@@ -540,7 +578,19 @@
                     <span class="course-tag">64 Students</span>
                     <span class="course-tag">SMU</span>
                 </div>
+                <div class="course-actions">
+                    <a href="https://chatgpt.com/g/g-6a23b85997508191bf63b422b97be366-stat-4340-smu-statistical-methods-for-engineers" target="_blank" rel="noopener" class="course-gpt">Open STAT 4340 GPT</a>
+                </div>
             </div>
+        </div>
+
+        <div class="learning-tools">
+            <div>
+                <p class="learning-tools-label">AI Learning Tool</p>
+                <h3 class="learning-tools-title">ProbStatGPT</h3>
+                <p class="learning-tools-copy">General probability and statistics support for review, examples, and practice.</p>
+            </div>
+            <a href="https://chatgpt.com/g/g-PXmlg0L0x-probstatgpt" target="_blank" rel="noopener" class="course-gpt secondary">Open ProbStatGPT</a>
         </div>
 
         <div class="philosophy">
