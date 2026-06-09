@@ -255,6 +255,24 @@
             font-size: 0.72rem; color: var(--subtle);
             padding: 3px 10px; border: 1px solid var(--card-border); border-radius: 2px;
         }
+        .course-offerings {
+            display: flex; flex-direction: column; gap: 0.65rem;
+            margin: 1.25rem 0 0; padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+        }
+        .course-offering {
+            display: grid; grid-template-columns: 92px 1fr; gap: 0.8rem; align-items: start;
+        }
+        .course-term {
+            font-size: 0.68rem; color: var(--accent);
+            letter-spacing: 0.08em; line-height: 1.5; text-transform: uppercase;
+        }
+        .course-format {
+            font-size: 0.82rem; color: var(--text); line-height: 1.55;
+        }
+        .course-format span {
+            display: block; color: var(--muted); font-size: 0.78rem; margin-top: 0.1rem;
+        }
         .course-actions {
             display: flex; flex-wrap: wrap; gap: 0.65rem;
             margin-top: 1.4rem;
@@ -339,6 +357,21 @@
             font-size: 0.67rem; color: var(--subtle);
             padding: 2px 7px; border: 1px solid var(--card-border); border-radius: 2px;
         }
+        .prev-offerings {
+            display: flex; flex-direction: column; gap: 0.35rem;
+            margin-top: 0.55rem; padding-top: 0.55rem;
+            border-top: 1px solid var(--card-border);
+        }
+        .prev-offering {
+            display: grid; grid-template-columns: 88px 1fr; gap: 0.55rem; align-items: start;
+        }
+        .prev-term {
+            font-size: 0.66rem; color: var(--accent);
+            letter-spacing: 0.07em; line-height: 1.45; text-transform: uppercase;
+        }
+        .prev-detail {
+            font-size: 0.76rem; color: var(--muted); line-height: 1.45;
+        }
 
         /* ── CV ── */
         #cv { background: var(--bg); }
@@ -390,7 +423,9 @@
             .photo-frame { width: 220px; height: 264px; margin: 0 auto; }
             .nav-links { display: none; }
             section { padding: 80px 0; }
+            .course-offering { grid-template-columns: 1fr; gap: 0.2rem; }
             .learning-tools { align-items: flex-start; flex-direction: column; }
+            .prev-grid, .prev-row, .prev-offering { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -552,31 +587,60 @@
                 <p class="course-code">STAT 2331</p>
                 <h3 class="course-name">Introduction to Statistical Methods</h3>
                 <p class="course-desc">
-                    A non-calculus-based introduction to statistical reasoning covering descriptive statistics, 
-                    data visualization, elementary probability, confidence intervals, hypothesis testing, 
-                    simple linear regression, and use of Excel for data analysis.
+                    A non-calculus-based introduction to statistical reasoning covering descriptive statistics,
+                    data visualization, elementary probability, confidence intervals, hypothesis testing,
+                    simple linear regression, and use of Excel for data analysis. Across terms, I emphasize
+                    active learning, applied interpretation, and statistical thinking for students from a wide
+                    range of disciplines.
                 </p>
                 <div class="course-meta">
-                    <span class="course-tag">Fall 2025: 270 Students</span>
-                    <span class="course-tag">Spring 2026: 230 Students</span>
+                    <span class="course-tag">2 Terms</span>
+                    <span class="course-tag">500 Students Total</span>
                     <span class="course-tag">SMU</span>
+                </div>
+                <div class="course-offerings">
+                    <div class="course-offering">
+                        <span class="course-term">Fall 2025</span>
+                        <p class="course-format">Standard semester <span>270 students</span></p>
+                    </div>
+                    <div class="course-offering">
+                        <span class="course-term">Spring 2026</span>
+                        <p class="course-format">Standard semester <span>230 students</span></p>
+                    </div>
                 </div>
                 <div class="course-actions">
                     <a href="https://chatgpt.com/g/g-69fd54d7c3548191b1416a9664946781-stat-2331-smu-intro-to-statistical-methods" target="_blank" rel="noopener" class="course-gpt">Open STAT 2331 GPT</a>
                 </div>
             </div>
             <div class="course-card">
-                <p class="course-code">STAT 4340</p>
+                <p class="course-code">STAT/CS 4340 &amp; OREM 3340</p>
                 <h3 class="course-name">Statistical Methods for Engineers &amp; Applied Scientists</h3>
                 <p class="course-desc">
-                    Core probability and statistics for engineering applications — probability rules, 
-                    random variables, common distributions, sampling distributions, estimation, and 
-                    elementary hypothesis testing with applied emphasis.
+                    Core probability and statistics for engineering applications, with emphasis on
+                    applied problem-solving and interpretation. Topics include probability rules,
+                    discrete and continuous random variables, common distributions, sampling
+                    distributions, the Central Limit Theorem, estimation, and one-sample hypothesis testing.
+                    Across sections, I developed assessments and study materials, evaluated student
+                    performance, assigned final grades, and held regular office hours.
                 </p>
                 <div class="course-meta">
-                    <span class="course-tag">Spring 2026</span>
-                    <span class="course-tag">64 Students</span>
+                    <span class="course-tag">3 Terms</span>
+                    <span class="course-tag">89 Students Total</span>
                     <span class="course-tag">SMU</span>
+                </div>
+                <div class="course-offerings">
+                    <div class="course-offering">
+                        <span class="course-term">Jan 2026</span>
+                        <p class="course-format">8-day intensive <span>6 hrs/day - 17 students</span></p>
+                    </div>
+                    <div class="course-offering">
+                        <span class="course-term">Spring 2026</span>
+                        <p class="course-format">Standard semester <span>3 x 50 min/week - 64 students</span></p>
+                    </div>
+                    <div class="course-offering">
+                        <span class="course-term">May 2026</span>
+                        <p class="course-format">11-day intensive <span>4 hrs/day - 8 students</span></p>
+                    </div>
                 </div>
                 <div class="course-actions">
                     <a href="https://chatgpt.com/g/g-6a23b85997508191bf63b422b97be366-stat-4340-smu-statistical-methods-for-engineers" target="_blank" rel="noopener" class="course-gpt">Open STAT 4340 GPT</a>
@@ -621,42 +685,86 @@
                     <span class="prev-code">MATH 126.EE</span>
                     <div>
                         <p class="prev-name">Precalculus I Expanded</p>
-                        <div class="prev-tags"><span class="prev-tag">Fall 2024</span><span class="prev-tag">42 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">1 Term</span><span class="prev-tag">42 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Fall 2024</span>
+                                <span class="prev-detail">42 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">MATH 181</span>
                     <div>
                         <p class="prev-name">Calculus I</p>
-                        <div class="prev-tags"><span class="prev-tag">Summer 2024</span><span class="prev-tag">Winter 2025</span><span class="prev-tag">16–18 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">2 Terms</span><span class="prev-tag">34 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Summer 2024</span>
+                                <span class="prev-detail">16 students</span>
+                            </div>
+                            <div class="prev-offering">
+                                <span class="prev-term">Winter 2025</span>
+                                <span class="prev-detail">18 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">MATH 127</span>
                     <div>
                         <p class="prev-name">Precalculus II</p>
-                        <div class="prev-tags"><span class="prev-tag">Winter 2023 &amp; 2024</span><span class="prev-tag">33–38 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">2 Terms</span><span class="prev-tag">71 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Winter 2023</span>
+                                <span class="prev-detail">33 students</span>
+                            </div>
+                            <div class="prev-offering">
+                                <span class="prev-term">Winter 2024</span>
+                                <span class="prev-detail">38 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">MATH 120</span>
                     <div>
                         <p class="prev-name">Fundamentals of College Mathematics</p>
-                        <div class="prev-tags"><span class="prev-tag">Fall 2023</span><span class="prev-tag">40 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">1 Term</span><span class="prev-tag">40 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Fall 2023</span>
+                                <span class="prev-detail">40 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">MATH 126</span>
                     <div>
                         <p class="prev-name">Precalculus I</p>
-                        <div class="prev-tags"><span class="prev-tag">Summer 2022</span><span class="prev-tag">23 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">1 Term</span><span class="prev-tag">23 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Summer 2022</span>
+                                <span class="prev-detail">23 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">STAT 352</span>
                     <div>
                         <p class="prev-name">Probability and Statistics <span style="color:var(--subtle);font-size:0.78rem;">(Recitation)</span></p>
-                        <div class="prev-tags"><span class="prev-tag">Fall 2022</span><span class="prev-tag">187 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">1 Term</span><span class="prev-tag">187 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Fall 2022</span>
+                                <span class="prev-detail">187 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -674,21 +782,47 @@
                     <span class="prev-code">STA 270</span>
                     <div>
                         <p class="prev-name">Applied Statistics</p>
-                        <div class="prev-tags"><span class="prev-tag">Fall 2020</span><span class="prev-tag">Spring 2021</span><span class="prev-tag">74–80 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">2 Terms</span><span class="prev-tag">154 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Fall 2020</span>
+                                <span class="prev-detail">80 students</span>
+                            </div>
+                            <div class="prev-offering">
+                                <span class="prev-term">Spring 2021</span>
+                                <span class="prev-detail">74 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">MAT 114</span>
                     <div>
                         <p class="prev-name">Quantitative Reasoning</p>
-                        <div class="prev-tags"><span class="prev-tag">Spring 2020</span><span class="prev-tag">Summer 2021</span><span class="prev-tag">10–67 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">2 Terms</span><span class="prev-tag">77 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Spring 2020</span>
+                                <span class="prev-detail">67 students</span>
+                            </div>
+                            <div class="prev-offering">
+                                <span class="prev-term">Summer 2021</span>
+                                <span class="prev-detail">10 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="prev-row">
                     <span class="prev-code">MAT 108</span>
                     <div>
                         <p class="prev-name">Algebra for Precalculus</p>
-                        <div class="prev-tags"><span class="prev-tag">Fall 2019</span><span class="prev-tag">115 students</span></div>
+                        <div class="prev-tags"><span class="prev-tag">1 Term</span><span class="prev-tag">115 Students Total</span></div>
+                        <div class="prev-offerings">
+                            <div class="prev-offering">
+                                <span class="prev-term">Fall 2019</span>
+                                <span class="prev-detail">115 students</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
